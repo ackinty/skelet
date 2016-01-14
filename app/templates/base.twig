@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aleat</title>
+    <!--[if lt IE 9]>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+
+<nav id="navbar-main" class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/menu1">Menu1</a></li>
+                <li><a href="/menu2">Menu2</a></li>
+                <li><a href="/menu3">Menu3</a></li>
+            </ul>
+
+            <ul class="list-unstyled navbar-right navbar-nav nav">
+                <li><a class="navbar-brand" data-placement="bottom" data-toggle="popover_login" data-title="Connexion" data-container="body"
+                    type="button" data-html="true" href="#" id="loginBtn"><span class="glyphicon glyphicon-user"></span></a>
+                </li>
+            </ul>
+
+            <div id="popover-login" class="hide">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Login" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button id="login" type="submit" class="btn btn-warning btn-sm">Me connecter</button>
+                    </div>
+                    <hr class="login">
+                    <a href="">Créer mon compte</a>
+                </form>
+            </div>
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<!-- SCRIPTS -->
+<script src="/js/libs/jquery-2.2.0.min.js"></script>
+<script src="/js/libs/bootstrap.min.js"></script>
+{% block scriptjs %}{% endblock %}
+</body>

@@ -1,0 +1,21 @@
+@import "variables.less";
+
+/** generique */
+body {
+    background-color: @backgroundColor;
+    font-family: Verdana, arial, sans-serif;
+    font-size: 10pt;
+    padding-top: @heightMainNavbar; // pour passer en dessous de la barre de nav
+}
+
+/** header **/
+#navbar-main {
+    background-color: @color-secondary-1-4;
+    // background-image: url("/img/noise.png" );
+    min-height: @heightMainNavbar;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color: @color-primary-1;
+    font-size: 12pt;
+}
