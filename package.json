@@ -1,7 +1,7 @@
 {
-  "name": "aleat",
+  "name": "skelet",
   "version": "1.0.0",
-  "description": "Aleat, spice your rpg ideas with a pinch of random.",
+  "description": "Slim skeleton",
   "main": "public/index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

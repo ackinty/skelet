@@ -1,4 +1,4 @@
-# Aleat, spice your rpg ideas with a pinch of random.
+# Skelet, a slim skelteon
 
 Based on slim-skeleton by Rob Allen
 

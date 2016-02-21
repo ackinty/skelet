@@ -1,13 +1,13 @@
 {
     "name": "skelet",
-    "description": "Aleat, spice your rpg ideas with a pinch of random.",
+    "description": "Slim skeleton.",
     "license": "BSD-3-Clause",
     "type": "project",
-    "keywords": ["slim-framework", "rpg", "random"],
+    "keywords": ["slim-framework"],
     "authors": [
         {
-            "name": "",
-            "email": ""
+            "name": "skelet",
+            "email": "skelet@localhost.localdomain"
         }
     ],
     "autoload": {
@@ -20,6 +20,7 @@
         "slim/twig-view": "^1.1",
         "slim/flash": "^0.1.0",
         "monolog/monolog": "^1.13",
-        "illuminate/database": "*"
+        "illuminate/database": "*",
+        "twig/extensions": "^1.3"
     }
 }

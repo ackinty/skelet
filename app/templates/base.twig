@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aleat</title>
+    <title>Skelet</title>
     <!--[if lt IE 9]>
     <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -15,7 +15,7 @@
     {% block css %}{% endblock %}
 </head>
 
-<body>
+<body id="{% block bodyId %}{% endblock %}">
 
 <nav id="navbar-main" class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container-fluid">
@@ -36,7 +36,7 @@
             </ul>
 
             <ul class="list-unstyled navbar-right navbar-nav nav">
-                <li><a class="navbar-brand" data-placement="bottom" data-toggle="popover_login" data-title="Connexion" data-container="body"
+                <li><a accesskey="l" class="navbar-brand" data-placement="bottom" data-toggle="popover_login" data-title="Connexion" data-container="body"
                     type="button" data-html="true" href="#" id="loginBtn"><span class="glyphicon glyphicon-user"></span></a>
                 </li>
             </ul>
@@ -44,13 +44,13 @@
             <div id="popover-login" class="hide">
                 <form>
                     <div class="form-group">
-                        <input type="text" placeholder="Login" class="form-control">
+                        <input name="login" type="text" placeholder="Login" class="form-control login">
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
+                        <input id="password" name="password" type="password" placeholder="Password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <button id="login" type="submit" class="btn btn-warning btn-sm">Me connecter</button>
+                        <button id="loginBtn" type="submit" class="btn btn-warning btn-sm">Me connecter</button>
                     </div>
                     <hr class="login">
                     <a href="">Créer mon compte</a>

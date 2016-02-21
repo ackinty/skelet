@@ -15,6 +15,10 @@ $container['view'] = function ($c) {
     // Add extensions
     $view->addExtension(new Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()));
     $view->addExtension(new Twig_Extension_Debug());
+    $view->addExtension(new Twig_Extensions_Extension_Text());
+
+    // global load for template
+    $view->offsetSet('appname', $settings['app']['appname']);
 
     return $view;
 };
@@ -38,18 +42,17 @@ $container['logger'] = function ($c) {
 };
 
 // -----------------------------------------------------------------------------
-// Action factories
+// Controller factories
 // -----------------------------------------------------------------------------
 
 $container['App\BaseController'] = function ($c) {
-    return new App\BaseController($c->get('view'), $c->get('logger'));
+    return new App\BaseController($c->get('view'), $c->get('logger'), $c->get('settings')['app']);
 };
-$container['App\Action\HomeAction'] = function ($c) {
-    return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
+$container['App\Controller\HomeController'] = function ($c) {
+    return new App\Controller\HomeController($c->get('view'), $c->get('logger'), $c->get('settings')['app']);
 };
-$container['App\Aleat\AleatController'] = function ($c) {
-    return new App\Aleat\AleatController($c->get('view'), $c->get('logger'));
-};
-$container['App\Aleat\ApiController'] = function ($c) {
-    return new App\Aleat\ApiController($c->get('view'), $c->get('logger'));
+
+$container['notFoundHandler'] = function($c) {
+    $errorController = new App\Controller\ErrorController($c->get('view'), $c->get('logger'), $c->get('settings')['app']);
+    return $errorController->get404($c);
 };

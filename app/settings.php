@@ -23,12 +23,17 @@ return [
         'eloquent' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'aleat',
-            'username'  => 'aleat',
-            'password'  => 'aleat',
+            'database'  => 'skelet',
+            'username'  => 'sjelet',
+            'password'  => 'sjelet',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
+        ],
+
+        // App specific
+        'app' => [
+            'appname' => 'skelet',
         ],
 
     ],

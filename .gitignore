@@ -2,4 +2,5 @@ vendor/
 log/*
 cache/*
 public/css
+public/js
 node_modules

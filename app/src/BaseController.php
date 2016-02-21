@@ -18,4 +18,11 @@ class BaseController
         $this->logger = $logger;
     }
 
+    protected function error404($response, $message) {
+        $this->view->render($response, 'error404.twig', [
+            'message' => $message,
+        ]);
+        return $response ;
+    }
+
 }
