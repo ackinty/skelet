@@ -1,4 +1,4 @@
-# Skelet, a slim skelteon
+# Skelet, a slim skeleton
 
 Based on slim-skeleton by Rob Allen
 
